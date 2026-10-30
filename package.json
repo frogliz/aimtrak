@@ -1,0 +1,29 @@
+{
+  "name": "aimtrak",
+  "version": "0.4.0",
+  "private": true,
+  "type": "module",
+  "description": "AIMTRAK — treinador de mira 3D para navegador com foco em VALORANT",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frogliz/aimtrak.git"
+  },
+  "homepage": "https://aimtrak-range.nikolasetatiana.chatgpt.site/",
+  "bugs": { "url": "https://github.com/frogliz/aimtrak/issues" },
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "start": "node scripts/serve.mjs",
+    "check": "node scripts/check.mjs",
+    "test": "node --test tests/training.test.mjs",
+    "build:portable": "node scripts/build-portable.mjs AIMTRAK.html",
+    "build": "npm run check && npm run build:portable && node scripts/package-site.mjs"
+  },
+  "dependencies": {
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12"
+  }
+}
